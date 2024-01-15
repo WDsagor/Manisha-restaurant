@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./Component/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
-const oswald = Montserrat({
+const oswald = Oswald({
   weight: ["200", "300", "400", "600", "700"],
   style: ["normal"],
   subsets: ["latin"],

@@ -46,9 +46,9 @@ const HomeSlider = () => {
                   transition={{ ease: "backInOut", duration: 1 }}
                   className=" max-w-3xl"
                 >
-                  <h1 className="text-5xl font-bold text-primary">TRADITIONALl</h1>
+                  <h1 className=" text-5xl font-bold text-primar">TRADITIONALl</h1>
                   <h1 className="text-5xl font-bold">INDIAN DELICACIES IN MEDWAY KENT</h1>
-                  <p className="py-6">
+                  <p className=" py-6">
                     Looking for delectable Indian food? Welcome to Manisha, an authentic Indian restaurant in Medway,
                     Kent. We are open 7 days a week, including bank holidays. If you enjoy the flavours of Indian
                     cuisine, please visit us or call us to book a table.
