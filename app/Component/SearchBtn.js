@@ -6,7 +6,7 @@ export const SearchBtn = () => {
     <span>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <button
-        className=" flex justify-center items-center gap-1"
+        className=" flex justify-center items-center gap-1 text-white hover:text-red-600 transition-all"
         onClick={() => document.getElementById("my_modal_3").showModal()}
       >
         <span>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
@@ -9,6 +9,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const HomeSlider = () => {
+  useLayoutEffect(() => {
+    const homeParallax = (e) => {
+      document.querySelectorAll(".item").forEach((move) => {
+        let moving = move.getAttribute("data-value");
+        let x = (e.clientX * moving) / 200;
+        let y = (e.clientY * moving) / 200;
+
+        move.style.transform = `translateX ${x}px translateY ${y}px`;
+      });
+    };
+    document.addEventListener("mousemove", homeParallax);
+  });
   return (
     <>
       <Swiper
@@ -38,7 +50,11 @@ const HomeSlider = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
                 >
-                  <Image src="/images/hero-1152w.webp" height={200} width={500} />
+                  <Image
+                    src="/images/hero-1152w.webp"
+                    height={200}
+                    width={500}
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: 0 }}
@@ -46,16 +62,25 @@ const HomeSlider = () => {
                   transition={{ ease: "backInOut", duration: 1 }}
                   className=" max-w-3xl"
                 >
-                  <h1 className=" text-5xl font-bold text-primar">TRADITIONALl</h1>
-                  <h1 className="text-5xl font-bold">INDIAN DELICACIES IN MEDWAY KENT</h1>
+                  <h1 className=" text-5xl font-bold text-primar">
+                    TRADITIONALl
+                  </h1>
+                  <h1 className="text-5xl font-bold">
+                    INDIAN DELICACIES IN MEDWAY KENT
+                  </h1>
                   <p className=" py-6">
-                    Looking for delectable Indian food? Welcome to Manisha, an authentic Indian restaurant in Medway,
-                    Kent. We are open 7 days a week, including bank holidays. If you enjoy the flavours of Indian
-                    cuisine, please visit us or call us to book a table.
+                    Looking for delectable Indian food? Welcome to Manisha, an
+                    authentic Indian restaurant in Medway, Kent. We are open 7
+                    days a week, including bank holidays. If you enjoy the
+                    flavours of Indian cuisine, please visit us or call us to
+                    book a table.
                   </p>
 
                   <motion.div transition={{ ease: "easeOut", duration: 3 }}>
-                    <Link href={"/restaurant"} className="relative overflow-hidden">
+                    <Link
+                      href={"/restaurant"}
+                      className="relative overflow-hidden"
+                    >
                       <Button value={"Order Now"} />
                     </Link>
                   </motion.div>
@@ -81,7 +106,11 @@ const HomeSlider = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
                 >
-                  <Image src="/images/hero-1152w.webp" height={200} width={500} />
+                  <Image
+                    src="/images/hero-1152w.webp"
+                    height={200}
+                    width={500}
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: 0 }}
@@ -89,16 +118,28 @@ const HomeSlider = () => {
                   transition={{ ease: "backInOut", duration: 1 }}
                   className=" max-w-3xl"
                 >
-                  <h1 className="text-5xl font-bold text-primary">TRADITIONAAL</h1>
-                  <h1 className="text-5xl font-bold">INDIAN DELICACIES IN MEDWAY KENT</h1>
-                  <p className="py-6">
-                    Looking for delectable Indian food? Welcome to Manisha, an authentic Indian restaurant in Medway,
-                    Kent. We are open 7 days a week, including bank holidays. If you enjoy the flavours of Indian
-                    cuisine, please visit us or call us to book a table.
+                  <h1
+                    className=" item text-5xl font-bold text-primary"
+                    data-value="7"
+                  >
+                    TRADITIONAAL
+                  </h1>
+                  <h1 className="text-5xl font-bold item" data-value="10">
+                    INDIAN DELICACIES IN MEDWAY KENT
+                  </h1>
+                  <p className="py-6 item" data-value="12">
+                    Looking for delectable Indian food? Welcome to Manisha, an
+                    authentic Indian restaurant in Medway, Kent. We are open 7
+                    days a week, including bank holidays. If you enjoy the
+                    flavours of Indian cuisine, please visit us or call us to
+                    book a table.
                   </p>
 
                   <motion.div transition={{ ease: "easeOut", duration: 3 }}>
-                    <Link href={"/restaurant"} className="relative overflow-hidden">
+                    <Link
+                      href={"/restaurant"}
+                      className="relative overflow-hidden"
+                    >
                       <Button value={"Order Now"} />
                     </Link>
                   </motion.div>
@@ -124,7 +165,11 @@ const HomeSlider = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
                 >
-                  <Image src="/images/hero-1152w.webp" height={200} width={500} />
+                  <Image
+                    src="/images/hero-1152w.webp"
+                    height={200}
+                    width={500}
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: 0 }}
@@ -132,16 +177,25 @@ const HomeSlider = () => {
                   transition={{ ease: "backInOut", duration: 1 }}
                   className=" max-w-3xl"
                 >
-                  <h1 className="text-5xl font-bold text-primary">TRADITIONAL</h1>
-                  <h1 className="text-5xl font-bold">INDIAN DELICACIES IN MEDWAY KENT</h1>
+                  <h1 className="text-5xl font-bold text-primary">
+                    TRADITIONAL
+                  </h1>
+                  <h1 className="text-5xl font-bold">
+                    INDIAN DELICACIES IN MEDWAY KENT
+                  </h1>
                   <p className="py-6">
-                    Looking for delectable Indian food? Welcome to Manisha, an authentic Indian restaurant in Medway,
-                    Kent. We are open 7 days a week, including bank holidays. If you enjoy the flavours of Indian
-                    cuisine, please visit us or call us to book a table.
+                    Looking for delectable Indian food? Welcome to Manisha, an
+                    authentic Indian restaurant in Medway, Kent. We are open 7
+                    days a week, including bank holidays. If you enjoy the
+                    flavours of Indian cuisine, please visit us or call us to
+                    book a table.
                   </p>
 
                   <motion.div transition={{ ease: "easeOut", duration: 3 }}>
-                    <Link href={"/restaurant"} className="relative overflow-hidden">
+                    <Link
+                      href={"/restaurant"}
+                      className="relative overflow-hidden"
+                    >
                       <Button value={"Order Now"} />
                     </Link>
                   </motion.div>
