@@ -14,7 +14,7 @@ const Navbar = () => {
   const path = usePathname();
   console.log(path);
   return (
-    <div className="absolute z-50 w-full justify-center max-w-screen-2xl mx-auto">
+    <div className="absolute z-50 w-full justify-center max-w-screen-2xl top-0 left-[50%] translate-x-[-50%]">
       <div className="navbar font-normal mx-auto">
         <div className="navbar-start">
           <div className="dropdown xl:hidden">
@@ -88,14 +88,6 @@ const Navbar = () => {
             >
               <Link href={"/restaurant"}>Restaurant</Link>
             </li>
-            <li
-              className={` ${
-                path === "/shop" ? "text-red-600" : ""
-              } hover:text-red-600 transition-all`}
-            >
-              <Link href={"/shop"}>Shop</Link>
-            </li>
-
             <Link href={"/"} className=" mx-2">
               <Image src={logo} height={80} width={180} />
             </Link>
@@ -125,7 +117,7 @@ const Navbar = () => {
           <Link href={"/restaurant"} className=" relative mx-1 overflow-hidden">
             {/* <Button value="Order now" /> */}
             <div className=" duration-500  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-md before:hover:scale-x-0 text-white">
-              <button className="duration-500 flex gap-1 px-2 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-md before:hover:scale-x-100">
+              <button className="duration-500 flex gap-1 px-3 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-md before:hover:scale-x-100">
                 <span>
                   <RiEBike2Fill />
                 </span>
@@ -133,7 +125,7 @@ const Navbar = () => {
               </button>
             </div>
           </Link>
-          <a className="text-white px-2 rounded-md bg-green-600 py-2 ml-2">
+          <a className="text-white px-3 rounded-md bg-green-600 py-2 ml-2">
             <PiShoppingCartSimpleDuotone size={25} />
           </a>
         </div>

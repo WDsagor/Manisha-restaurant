@@ -1,7 +1,8 @@
 import React from "react";
+import TestGsap from "./TestGsap";
 
 const restaurant = () => {
-  return <div className=" text-3xl font-normal">restaurant</div>;
+  return <div className="">{<TestGsap />}</div>;
 };
 
 export default restaurant;

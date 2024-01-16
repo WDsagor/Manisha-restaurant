@@ -5,22 +5,9 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
 import Button from "./Button";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const HomeSlider = () => {
-  useLayoutEffect(() => {
-    const homeParallax = (e) => {
-      document.querySelectorAll(".item").forEach((move) => {
-        let moving = move.getAttribute("data-value");
-        let x = (e.clientX * moving) / 200;
-        let y = (e.clientY * moving) / 200;
-
-        move.style.transform = `translateX ${x}px translateY ${y}px`;
-      });
-    };
-    document.addEventListener("mousemove", homeParallax);
-  });
   return (
     <>
       <Swiper
@@ -43,9 +30,9 @@ const HomeSlider = () => {
           >
             {/* <div className="hero-overlay bg-opacity-60"></div> */}
 
-            <motion.div className="hero min-h-screen max-w-screen-2xl mx-auto">
+            <div className="hero min-h-screen max-w-screen-2xl mx-auto">
               <div className="hero-content flex-col lg:flex-row">
-                <motion.div
+                <div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
@@ -55,8 +42,8 @@ const HomeSlider = () => {
                     height={200}
                     width={500}
                   />
-                </motion.div>
-                <motion.div
+                </div>
+                <div
                   initial={{ opacity: 0, x: 0 }}
                   animate={{ x: 100, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
@@ -76,17 +63,17 @@ const HomeSlider = () => {
                     book a table.
                   </p>
 
-                  <motion.div transition={{ ease: "easeOut", duration: 3 }}>
+                  <div transition={{ ease: "easeOut", duration: 3 }}>
                     <Link
                       href={"/restaurant"}
                       className="relative overflow-hidden"
                     >
                       <Button value={"Order Now"} />
                     </Link>
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -99,9 +86,9 @@ const HomeSlider = () => {
           >
             {/* <div className="hero-overlay bg-opacity-60"></div> */}
 
-            <motion.div className="hero min-h-screen max-w-screen-2xl mx-auto">
+            <div className="hero min-h-screen max-w-screen-2xl mx-auto">
               <div className="hero-content flex-col lg:flex-row">
-                <motion.div
+                <div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
@@ -111,8 +98,8 @@ const HomeSlider = () => {
                     height={200}
                     width={500}
                   />
-                </motion.div>
-                <motion.div
+                </div>
+                <div
                   initial={{ opacity: 0, x: 0 }}
                   animate={{ x: 100, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
@@ -135,17 +122,17 @@ const HomeSlider = () => {
                     book a table.
                   </p>
 
-                  <motion.div transition={{ ease: "easeOut", duration: 3 }}>
+                  <div transition={{ ease: "easeOut", duration: 3 }}>
                     <Link
                       href={"/restaurant"}
                       className="relative overflow-hidden"
                     >
                       <Button value={"Order Now"} />
                     </Link>
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -158,9 +145,9 @@ const HomeSlider = () => {
           >
             {/* <div className="hero-overlay bg-opacity-60"></div> */}
 
-            <motion.div className="hero min-h-screen max-w-screen-2xl mx-auto">
+            <div className="hero min-h-screen max-w-screen-2xl mx-auto">
               <div className="hero-content flex-col lg:flex-row">
-                <motion.div
+                <div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
@@ -170,8 +157,8 @@ const HomeSlider = () => {
                     height={200}
                     width={500}
                   />
-                </motion.div>
-                <motion.div
+                </div>
+                <div
                   initial={{ opacity: 0, x: 0 }}
                   animate={{ x: 100, opacity: 1 }}
                   transition={{ ease: "backInOut", duration: 1 }}
@@ -191,17 +178,17 @@ const HomeSlider = () => {
                     book a table.
                   </p>
 
-                  <motion.div transition={{ ease: "easeOut", duration: 3 }}>
+                  <div transition={{ ease: "easeOut", duration: 3 }}>
                     <Link
                       href={"/restaurant"}
                       className="relative overflow-hidden"
                     >
                       <Button value={"Order Now"} />
                     </Link>
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
