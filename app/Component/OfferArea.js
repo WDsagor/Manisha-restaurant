@@ -42,7 +42,7 @@ const OfferArea = () => {
             <h1 className="text-3xl py-2 font-bold uppercase text-yellow-400">
               Limited time only
             </h1>
-            <h1 className="text-7xl font-bold leading-tight uppercase text-white">
+            <h1 className="text-6xl font-bold leading-tight uppercase text-white">
               Sweet Chilli King <br />
               Prawns (NEW)
             </h1>
@@ -93,7 +93,7 @@ const OfferArea = () => {
             <div
               className="text-4xl  h-[400px] group-hover:scale-150 duration-700 transition-all"
               style={{
-                background: `url("/images/1 (3).jpg")`,
+                background: `url("/images/1 (2).jpg")`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
