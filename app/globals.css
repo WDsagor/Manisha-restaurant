@@ -6,3 +6,20 @@
 /* body{
     background-color: darkolivegreen;
 } */
+.text span {
+position: absolute;
+left: 50%;
+transform-origin: 0 88px;
+}
+.text{
+    animation: logRotatetext 10s linear infinite;
+
+}
+@keyframes logRotatetext {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -4,8 +4,8 @@ import TandooriDishesSlider from "./TandooriDishesSlider";
 const SpecialDish = () => {
   return (
     <section className=" bg-yellow-50">
-      <div className="container max-w-screen-2xl mx-auto">
-        <div className="w-full mx-auto text-center max-w-lg py-20 ">
+      <div className="container max-w-screen-2xl mx-auto py-20">
+        <div className="w-full mx-auto text-center max-w-lg pb-20 ">
           <h1 className="text-xl text-red-600 uppercase">
             Special Tandoori Dishes
           </h1>
