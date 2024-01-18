@@ -1,5 +1,7 @@
-import { Great_Vibes, Yesteryear } from "next/font/google";
+import { Yesteryear } from "next/font/google";
 import React from "react";
+import { BsCurrencyPound } from "react-icons/bs";
+import Button from "./Button";
 
 const GreatVibes = Yesteryear({
   weight: ["400"],
@@ -16,7 +18,7 @@ const OfferArea = () => {
           </span>
           GET <span className="text-red-600 mx-3"> $5 OFF </span> JOIN INDIAN
           FOOD REWARDS
-          <butto className=" mx-3 btn btn-outline text-3xl bg-transparent hover:bg-red-600 hover:text-white">
+          <butto className=" mx-3 btn btn-outline text-3xl bg-transparent hover:bg-red-600 hover:text-white hover:border-white">
             CREATE AN ACCOUNT
           </butto>
           OR{" "}
@@ -25,18 +27,98 @@ const OfferArea = () => {
           </span>
         </p>
       </div>
-      <div className=" grid grid-cols-2 overflow-hidden">
-        <div
-          className="text-4xl h-96 hover:scale-150 duration-500 transition-all"
-          style={{
-            background: `url("/images/Home-bg-1280x1072-2880w.png")`,
-            backgroundSize: "cover",
-          }}
-        ></div>
-        <div>
-          <h1 className="text-6xl uppercase text-white">Tandoori Chicken</h1>
+      <div className=" grid lg:grid-cols-2">
+        <div className="group overflow-hidden relative cursor-pointer">
+          <div
+            className="text-4xl h-[800px] group-hover:scale-150 duration-700 transition-all"
+            style={{
+              background: `url("/images/1 (1).jpg")`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          ></div>
+          <div className=" absolute top-0 z-50 text-left w-full p-10">
+            <h1 className="text-3xl py-2 font-bold uppercase text-yellow-400">
+              Limited time only
+            </h1>
+            <h1 className="text-7xl font-bold leading-tight uppercase text-white">
+              Sweet Chilli King <br />
+              Prawns (NEW)
+            </h1>
+            <p className="text-white max-w-md text-xl py-3">
+              Old Delhi street stall style prawns in a sauce of chilli and
+              garlic, served with peppers and spring onions
+            </p>
+            <p className="text-white max-w-md text-4xl py-3 flex uppercase items-end">
+              Only{" "}
+              <span className="flex items-center text-6xl text-yellow-300">
+                <BsCurrencyPound />
+                6.95
+              </span>
+            </p>
+            <Button />
+          </div>
         </div>
-        <div className="text-4xl">two</div>
+        <div className="grid grid-flow-row grid-col-2">
+          <div className="group overflow-hidden relative">
+            <div
+              className="text-4xl h-[400px] group-hover:scale-150 duration-700 transition-all"
+              style={{
+                background: `url("/images/1 (1).jpeg")`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div className=" absolute top-0 z-50 text-center w-full p-10">
+              <h1 className="text-2xl py-2 font-bold uppercase text-yellow-400">
+                Limited time only
+              </h1>
+              <h1 className="text-4xl font-bold leading-tight uppercase text-white">
+                Soft Shell Crab (NEW)
+              </h1>
+              <p className="text-white  text-xl py-3">
+                Cooked with exotic spices, and served crispy
+              </p>
+              <p className="text-white text-center text-xl py-3 uppercase items-end">
+                <span className="flex mb-3 justify-center items-center text-4xl text-yellow-300">
+                  <BsCurrencyPound />
+                  6.50
+                </span>
+                USE CODE: SPECIAL3
+              </p>
+            </div>
+          </div>
+          <div className="group overflow-hidden relative">
+            <div
+              className="text-4xl  h-[400px] group-hover:scale-150 duration-700 transition-all"
+              style={{
+                background: `url("/images/1 (3).jpg")`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div className=" absolute top-0 text-left w-full p-10">
+              <h1 className="text-2xl py-2 font-bold uppercase text-yellow-400">
+                Limited time only
+              </h1>
+              <h1 className="text-4xl font-bold leading-tight uppercase text-white">
+                Traditional Main Courses
+              </h1>
+              <p className="text-white max-w-md text-xl py-3">
+                Old Delhi street stall style prawns in a sauce of chilli and
+                garlic, served with peppers and spring onions
+              </p>
+              <p className="text-white max-w-md text-2xl py-3 uppercase items-end">
+                Starting at
+                <span className="flex items-center text-4xl text-yellow-300">
+                  <BsCurrencyPound />
+                  6.95
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

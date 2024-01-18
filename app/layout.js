@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${oswald.className} relative mx-auto`}>
+      <body className={`${oswald.className} mx-auto`}>
         <Navbar />
         <div className="">{children}</div>
       </body>
