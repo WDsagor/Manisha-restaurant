@@ -10,7 +10,7 @@ const CercleLogo = () => {
       .split("")
       .map(
         (char, i) =>
-          `<span style="transform:rotate(${i * 4.3}deg)" >${char}</span>`
+          `<span style="transform:rotate(${i * 5}deg)" >${char}</span>`
       )
       .join("");
   }, []);
