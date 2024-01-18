@@ -1,5 +1,7 @@
+import HappySudadyArea from "./Component/HappySudadyArea";
 import HomeSlider from "./Component/HomeSlider";
 import OfferArea from "./Component/OfferArea";
+import SpecialDish from "./Component/SpecialDish";
 
 export default function Home() {
   return (
@@ -7,6 +9,8 @@ export default function Home() {
       {/* <h1 className="font-normal text-4xl"> Home page</h1> */}
       <HomeSlider />
       <OfferArea />
+      <HappySudadyArea />
+      <SpecialDish />
     </main>
   );
 }

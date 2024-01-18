@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const path = usePathname();
-  console.log(path);
+
   return (
     <div className="absolute z-50 w-full justify-center max-w-screen-2xl top-0 left-[50%] translate-x-[-50%]">
       <div className="navbar font-normal mx-auto">

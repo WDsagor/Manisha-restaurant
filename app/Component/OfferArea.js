@@ -11,7 +11,7 @@ const GreatVibes = Yesteryear({
 const OfferArea = () => {
   return (
     <section className="">
-      <div className="container max-w-screen-2xl mx-auto">
+      <div className="container max-w-screen-2xl mx-auto px-3">
         <p className="flex font-bold justify-center items-center py-10 text-3xl">
           <span className={`${GreatVibes.className} mr-4 text-green-600`}>
             Indian food{" "}
@@ -93,7 +93,7 @@ const OfferArea = () => {
             <div
               className="text-4xl  h-[400px] group-hover:scale-150 duration-700 transition-all"
               style={{
-                background: `url("/images/1 (2).jpg")`,
+                background: `url("/images/1 (4).jpg")`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
