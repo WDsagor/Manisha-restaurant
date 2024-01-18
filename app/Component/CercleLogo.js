@@ -26,7 +26,7 @@ const CercleLogo = () => {
         className=" absolute w-[130px] h-[130px] rounded-[50%]"
       ></div>
       <div className=" absolute w-full h-full text font-normal uppercase text-xs">
-        <p>House Specials - Indian Food - Masnisha Resturant</p>
+        <p>Indian Food - House Specials - Indian Food - Masnisha Resturant</p>
       </div>
     </div>
   );
