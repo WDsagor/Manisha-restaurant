@@ -14,7 +14,7 @@ const Navbar = () => {
   const path = usePathname();
 
   return (
-    <div className="absolute z-50 w-full justify-center max-w-screen-2xl top-0 left-[50%] translate-x-[-50%]">
+    <div className="fixed bg-current z-50 w-full justify-center max-w-screen-2xl top-0 left-[50%] translate-x-[-50%]">
       <div className="navbar font-normal mx-auto">
         <div className="navbar-start">
           <div className="dropdown xl:hidden">

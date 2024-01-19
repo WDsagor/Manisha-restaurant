@@ -7,16 +7,16 @@ export const SearchBtn = () => {
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <button
         className=" flex justify-center items-center gap-1 text-white hover:text-red-600 transition-all"
-        onClick={() => document.getElementById("my_modal_3").showModal()}
+        onClick={() => document.getElementById("searchModal").showModal()}
       >
         <span>
           <IoSearch />
         </span>
         Search
       </button>
-      <dialog id="my_modal_3" className="modal modal-top">
+      <dialog id="searchModal" className="modal modal-top">
         <div className="w-full max-w-screen-2xl mx-auto bg-slate-50">
-          <form className=" min-w-full " method="dialog">
+          <form className=" min-w-full" method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
               ✕

@@ -15,7 +15,7 @@ const CercleLogo = () => {
       .join("");
   }, []);
   return (
-    <div className="border-[3px] border-red-600 relative w-[185px] h-[185px] rounded-[50%] flex justify-center items-center">
+    <div className="border-[3px] cursor-pointer border-red-600 relative w-[185px] h-[185px] rounded-[50%] flex justify-center items-center">
       <div
         style={{
           background: `url("/images/logo.png")`,
