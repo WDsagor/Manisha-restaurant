@@ -136,7 +136,12 @@ const TestGsap = () => {
         >
           <div className="hero-content flex-col lg:flex-row">
             <div className="image1 overflow-hidden">
-              <Image src="/images/hero-1152w.webp" height={200} width={500} />
+              <Image
+                src="/images/hero-1152w.webp"
+                height={200}
+                width={500}
+                alt="slider image"
+              />
             </div>
 
             <div className="max-w-3xl">

@@ -1,6 +1,7 @@
 import HappySudadyArea from "./Component/HappySudadyArea";
 import HomeSlider from "./Component/HomeSlider";
 import HouseSpeacial from "./Component/HouseSpeacial";
+import Newslater from "./Component/Newslater";
 import OfferArea from "./Component/OfferArea";
 import SpecialDish from "./Component/SpecialDish";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <HappySudadyArea />
       <SpecialDish />
       <HouseSpeacial />
+      <Newslater/>
     </main>
   );
 }

@@ -69,7 +69,7 @@ export const Slider1 = () => {
         <div className="hero min-h-screen max-w-screen-2xl mx-auto container box">
           <div className="hero-content flex-col lg:flex-row">
             <div className="image1 overflow-hidden">
-              <Image src="/images/hero-1152w.webp" height={200} width={500} />
+              <Image src="/images/hero-1152w.webp" height={200} width={500} alt="backgorund" />
             </div>
 
             <div className="max-w-3xl">

@@ -12,13 +12,13 @@ const OfferArea = () => {
   return (
     <section className="">
       <div className="container max-w-screen-2xl mx-auto px-3">
-        <p className="flex font-bold justify-center items-center py-10 text-3xl">
+        <p className="flex font-bold justify-center items-center py-10 text-xs md:text-xl lg:text-3xl">
           <span className={`${GreatVibes.className} mr-4 text-green-600`}>
             Indian food{" "}
           </span>
           GET <span className="text-red-600 mx-3"> $5 OFF </span> JOIN INDIAN
           FOOD REWARDS
-          <butto className=" mx-3 btn btn-outline text-3xl bg-transparent hover:bg-red-600 hover:text-white hover:border-white">
+          <butto className=" mx-3 btn-sm md:btn-md lg:btn-lg btn btn-outline text-sm md:text-xl lg:text-3xl bg-transparent hover:bg-red-600 hover:text-white hover:border-white">
             CREATE AN ACCOUNT
           </butto>
           OR{" "}

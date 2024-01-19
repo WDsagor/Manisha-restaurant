@@ -10,24 +10,28 @@ const HappySudadyArea = () => {
         src="/images/food4.png"
         height={100}
         width={200}
+        alt="food"
       />
       <Image
         className="absolute right-0 top-[20%]"
         src="/images/food3.png"
         height={100}
         width={200}
+        alt="food"
       />
       <Image
         className=" absolute top-[-5%] left-[10%]"
         src="/images/tomato1.png"
         height={200}
         width={200}
+        alt="food"
       />
       <Image
         className="absolute bottom-[-10%] left-[40%]"
         src="/images/tomato1.png"
         height={200}
         width={200}
+        alt="food"
       />
       <div
         className=" absolute top-0 left-0 w-full h-full "
@@ -44,13 +48,14 @@ const HappySudadyArea = () => {
             src="/images/leaf.png"
             height={600}
             width={600}
+            alt="leaf"
           />
 
           <div className=" absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-            <h1 className="text-2xl text-yellow-400 font-bold">
+            <h1 className=" text-xs md:text-xl lg:text-2xl text-yellow-400 font-bold">
               40% OFF ALL PREMIUM FOOD
             </h1>
-            <h1 className="text-7xl text-white font-bold leading-normal">
+            <h1 className=" text-3xl md:text-5xl lg:text-7xl text-white font-bold leading-normal">
               HAPPY SUNDAY
             </h1>
             <p className="text-white">

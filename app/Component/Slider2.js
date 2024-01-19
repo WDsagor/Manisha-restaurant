@@ -10,7 +10,7 @@ const Slider2 = () => {
     let ctx = gsap.context(() => {
       t1.current = gsap
         .timeline({
-          defaults: { delay: .75, duration: 0.75, ease: "power3.easeOut" },
+          defaults: { delay: 0.75, duration: 0.75, ease: "power3.easeOut" },
           repeat: -1,
         })
         .fromTo(
@@ -47,19 +47,6 @@ const Slider2 = () => {
             ease: "power3.inOut",
           },
           "<30%"
-        )
-        .fromTo(
-          ".image2",
-          { scale: 1, opacity: 0, x: "100%" },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 1,
-            scale: 1,
-            ease: "power3.inOut",
-            overflow: "hidden",
-          },
-          "<30%"
         );
     }, el);
   }, []);
@@ -77,7 +64,12 @@ const Slider2 = () => {
         <div className="hero min-h-screen max-w-screen-2xl mx-auto container box">
           <div className="hero-content flex-col lg:flex-row">
             <div className="image1 overflow-hidden">
-              <Image src="/images/hero-1152w.webp" height={200} width={500} />
+              <Image
+                src="/images/hero-1152w.webp"
+                height={200}
+                width={500}
+                alt="slider image"
+              />
             </div>
 
             <div className="max-w-3xl">

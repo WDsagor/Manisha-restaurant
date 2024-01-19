@@ -1,6 +1,7 @@
 import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Component/Navbar";
+import Footer from "./Component/Footer";
 
 const oswald = Oswald({
   weight: ["200", "300", "400", "600", "700"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={`${oswald.className} mx-auto`}>
         <Navbar />
         <div className="">{children}</div>
+        <Footer />
       </body>
     </html>
   );

@@ -34,30 +34,30 @@ const HouseSpeacial = () => {
     },
   ];
   return (
-    <section className=" bg-orange-50">
+    <section className=" bg-orange-50 py-20">
       <div className=" container max-w-screen-2xl mx-auto">
-        <div className="flex py-20 items-center">
+        <div className="flex flex-col-reverse pb-20 items-center">
           <div className="px-5 mr-16 lg:mr-[250px]">
             <h1 className="text-2xl uppercase font-bold text-red-600">
               EXPLORE THE NEW TASTE
             </h1>
             <h1 className="text-5xl uppercase font-bold">House Specials</h1>
           </div>
-          <div>
+          <div className=" mb-10 md:mb-0">
             <CercleLogo />
           </div>
         </div>
       </div>
-      <div className=" grid grid-cols-2 gap-20">
+      <div className=" grid lg:grid-cols-2 gap-20">
         <div
-          className=" h-[500px]"
+          className=" h-[500px] hidden md:block"
           style={{
             background: `url("/images/1 (2).jpg")`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
         ></div>
-        <div className=" max-w-2xl">
+        <div className=" px-4 max-w-2xl">
           {houseSpeacial.map(({ id, name, discription, price }) => {
             return (
               <div key={id} className="flex justify-between ">
