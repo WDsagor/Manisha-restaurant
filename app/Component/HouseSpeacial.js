@@ -8,42 +8,32 @@ const HouseSpeacial = () => {
       id: 1,
       name: "Lamb Shashlick",
       price: 5.6,
-      discription:
-        "Lamb with tomatoes, green pepper and onion cooked in the clay oven. Served with salad",
+      discription: "Lamb with tomatoes, green pepper and onion cooked in the clay oven. Served with salad",
     },
     {
       id: 2,
       name: "Chicken Tikka",
       price: 4.5,
-      discription:
-        "Spring chicken on the bone, marinated and grilled in the tandoori oven. Served with salad",
+      discription: "Spring chicken on the bone, marinated and grilled in the tandoori oven. Served with salad",
     },
     {
       id: 3,
       name: "Lamb Tikka",
       price: 6.5,
-      discription:
-        "Spring chicken on the bone, marinated and grilled in the tandoori oven. Served with salad",
+      discription: "Spring chicken on the bone, marinated and grilled in the tandoori oven. Served with salad",
     },
     {
       id: 4,
       name: "Tandoori Chicken",
       price: 5.5,
-      discription:
-        "Chicken tikka, seekh kebab, lamb tikka, tandoori chicken, tandoori king prawn. Served with salad",
+      discription: "Chicken tikka, seekh kebab, lamb tikka, tandoori chicken, tandoori king prawn. Served with salad",
     },
   ];
   return (
     <section className=" bg-orange-50 py-20">
       <div className=" container max-w-screen-2xl mx-auto">
-        <div className="flex flex-col-reverse md:flex-row pb-20 items-center">
-          <div className="px-5 mr-16 lg:mr-[250px]">
-            <h1 className="text-2xl uppercase font-bold text-red-600">
-              EXPLORE THE NEW TASTE
-            </h1>
-            <h1 className="text-5xl uppercase font-bold">House Specials</h1>
-          </div>
-          <div className=" mb-10 md:mb-0">
+        <div className="flex justify-center items-center">
+          <div className=" mb-10">
             <CercleLogo />
           </div>
         </div>

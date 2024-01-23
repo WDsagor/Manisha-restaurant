@@ -18,16 +18,8 @@ export const Slider1 = () => {
           defaults: { delay: 0.75, duration: 0.75, ease: "power3.easeOut" },
           //   repeat: -1,
         })
-        .fromTo(
-          ".text1",
-          { x: -200, scale: 0.5, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5, scale: 1 }
-        )
-        .fromTo(
-          ".text2",
-          { y: -100, scale: 0.5, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, scale: 1 }
-        )
+        .fromTo(".text1", { x: -200, scale: 0.5, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, scale: 1 })
+        .fromTo(".text2", { y: -100, scale: 0.5, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, scale: 1 })
         .fromTo(
           ".text3",
           { scale: 0.5, opacity: 0 },
@@ -58,7 +50,7 @@ export const Slider1 = () => {
   return (
     <div ref={el}>
       <div
-        className="hero min-h-screen text-white"
+        className="hero min-h-screen text-primary"
         style={{
           background: `url("/images/Home-bg-1280x1072-2880w.png")`,
           backgroundSize: "cover",
@@ -73,17 +65,12 @@ export const Slider1 = () => {
             </div>
 
             <div className="max-w-3xl">
-              <h1 className={` text1 text-5xl font-bold text-primar`}>
-                TRADITIONALl
-              </h1>
-              <h1 className="text2 text-5xl font-bold">
-                INDIAN DELICACIES IN MEDWAY KENT
-              </h1>
+              <h1 className={` text1 text-5xl font-bold text-primary`}>TRADITIONALl</h1>
+              <h1 className="text2 text-5xl font-bold">INDIAN DELICACIES IN MEDWAY KENT</h1>
               <p className=" text3 py-6">
-                Looking for delectable Indian food? Welcome to Manisha, an
-                authentic Indian restaurant in Medway, Kent. We are open 7 days
-                a week, including bank holidays. If you enjoy the flavours of
-                Indian cuisine, please visit us or call us to book a table.
+                Looking for delectable Indian food? Welcome to Manisha, an authentic Indian restaurant in Medway, Kent.
+                We are open 7 days a week, including bank holidays. If you enjoy the flavours of Indian cuisine, please
+                visit us or call us to book a table.
               </p>
             </div>
           </div>

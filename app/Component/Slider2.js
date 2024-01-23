@@ -26,16 +26,8 @@ const Slider2 = () => {
           },
           "<30%"
         )
-        .fromTo(
-          ".text4",
-          { x: -200, scale: 0.5, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5, scale: 1 }
-        )
-        .fromTo(
-          ".text5",
-          { y: -100, scale: 0.5, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, scale: 1 }
-        )
+        .fromTo(".text4", { x: -200, scale: 0.5, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, scale: 1 })
+        .fromTo(".text5", { y: -100, scale: 0.5, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, scale: 1 })
         .fromTo(
           ".text6",
           { scale: 0.5, opacity: 0 },
@@ -53,7 +45,7 @@ const Slider2 = () => {
   return (
     <div ref={el}>
       <div
-        className="hero min-h-screen text-white"
+        className="hero min-h-screen text-primary"
         style={{
           background: `url("/images/Home-bg-1280x1072-2880w.png")`,
           backgroundSize: "cover",
@@ -64,26 +56,16 @@ const Slider2 = () => {
         <div className="hero min-h-screen max-w-screen-2xl mx-auto container box">
           <div className="hero-content flex-col lg:flex-row">
             <div className="image1 overflow-hidden">
-              <Image
-                src="/images/hero-1152w.webp"
-                height={200}
-                width={500}
-                alt="slider image"
-              />
+              <Image src="/images/hero-1152w.webp" height={200} width={500} alt="slider image" />
             </div>
 
             <div className="max-w-3xl">
-              <h1 className=" text4 text-5xl font-bold text-primar">
-                TRADITIONALl
-              </h1>
-              <h1 className="text5 text-5xl font-bold">
-                INDIAN DELICACIES IN MEDWAY KENT
-              </h1>
+              <h1 className=" text4 text-5xl font-bold text-primar">TRADITIONALl</h1>
+              <h1 className="text5 text-5xl font-bold">INDIAN DELICACIES IN MEDWAY KENT</h1>
               <p className=" text6 py-6">
-                Looking for delectable Indian food? Welcome to Manisha, an
-                authentic Indian restaurant in Medway, Kent. We are open 7 days
-                a week, including bank holidays. If you enjoy the flavours of
-                Indian cuisine, please visit us or call us to book a table.
+                Looking for delectable Indian food? Welcome to Manisha, an authentic Indian restaurant in Medway, Kent.
+                We are open 7 days a week, including bank holidays. If you enjoy the flavours of Indian cuisine, please
+                visit us or call us to book a table.
               </p>
             </div>
           </div>

@@ -20,17 +20,10 @@ const Navbar = () => {
           <div className="navbar-start">
             <div className="dropdown xl:hidden">
               <div className="drawer">
-                <input
-                  id="my-drawer"
-                  type="checkbox"
-                  className="drawer-toggle"
-                />
+                <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
                   {/* Page content here */}
-                  <label
-                    htmlFor="my-drawer"
-                    className="drawer-button text-primary"
-                  >
+                  <label htmlFor="my-drawer" className="drawer-button text-primary">
                     <span className="group">
                       <BiMenuAltLeft
                         className="group-hover:hidden cursor-pointer transition-all duration-700"
@@ -44,11 +37,7 @@ const Navbar = () => {
                   </label>
                 </div>
                 <div className="drawer-side">
-                  <label
-                    htmlFor="my-drawer"
-                    aria-label="close sidebar"
-                    className="drawer-overlay"
-                  ></label>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                   <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                     {/* Sidebar content here */}
                     <li>
@@ -76,40 +65,32 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-center hidden xl:flex font-normal">
-            <ul className=" flex flex-row justify-center items-center gap-5 px-1 uppercase hover:bg-transparent text-white">
-              <li
-                className={` ${
-                  path === "/" ? "text-red-600" : ""
-                } hover:text-red-600 transition-all`}
-              >
+            <ul className="flex flex-row justify-center items-center gap-5 px-1 uppercase hover:bg-transparent text-white">
+              <li className={` ${path === "/" ? "text-red-600" : ""} hover:text-red-600 transition-all`}>
                 <Link className=" " href={"/"}>
                   Home
                 </Link>
               </li>
-              <li
-                className={` ${
-                  path === "/restaurant" ? "text-red-600" : ""
-                } hover:text-red-600 transition-all`}
-              >
+              <li className={` ${path === "/restaurant" ? "text-red-600" : ""} hover:text-red-600 transition-all`}>
                 <Link href={"/restaurant"}>Restaurant</Link>
               </li>
               <Link href={"/"} className=" mx-2">
                 <Image src={logo} height={80} width={180} alt="logo" />
               </Link>
 
-              <li
-                className={` ${
-                  path === "/order-online" ? "text-red-600" : ""
-                } hover:text-red-600 transition-all`}
-              >
-                <Link href={"/order-online"}>Order Online</Link>
+              <li className={`transition-all group`}>
+                <summary className="hover:text-red-600">More</summary>
+                <ul className="p-2 absolute to-[120px] hidden group-hover:block w-sm bg-transparent ">
+                  <li className="hover:text-red-600">
+                    <a>Take Away</a>
+                  </li>
+                  <li className="hover:text-red-600">
+                    <a>Dining</a>
+                  </li>
+                </ul>
               </li>
 
-              <li
-                className={` ${
-                  path === "/contact" ? "text-red-600" : ""
-                } hover:text-red-600 transition-all`}
-              >
+              <li className={` ${path === "/contact" ? "text-red-600" : ""} hover:text-red-600 transition-all`}>
                 <Link href={"/"}>Contact</Link>
               </li>
             </ul>
@@ -119,10 +100,7 @@ const Navbar = () => {
             <div className="  mr-2">
               <SearchBtn />
             </div>
-            <Link
-              href={"/restaurant"}
-              className=" hidden md:block relative mx-1 overflow-hidden"
-            >
+            <Link href={"/restaurant"} className=" hidden md:block relative mx-1 overflow-hidden">
               {/* <Button value="Order now" /> */}
               <div className=" duration-500  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-md before:hover:scale-x-0 text-white">
                 <button className="duration-500 flex gap-1 px-3 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-md before:hover:scale-x-100">
