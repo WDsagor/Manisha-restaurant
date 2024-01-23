@@ -62,9 +62,9 @@ const Navbar = () => {
             <div className=" hidden md:flex justify-center items-center gap-2 text-white">
               <FaPhoneVolume color="green" size={30} />
               <p>
-                <span>24/7 SUPPORT CENTER</span>
+                <span className="text-error">01634 716 877</span>
                 <br />
-                <span className="text-xl text-red-600">+1 718-904-4450R</span>
+                <span className="text-error">01634 710 701</span>
               </p>
             </div>
           </div>

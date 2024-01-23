@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import OrderForm from "./OrderForm";
+export const metadata = {
+  title: "Take Awya - Manisha",
+  description: "Manisha is Indian Restaurant",
+};
 
 const page = () => {
   return (
-    <div>Take away page</div>
-  )
-}
+    <section>
+      <OrderForm />
+    </section>
+  );
+};
 
-export default page
+export default page;
