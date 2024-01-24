@@ -96,6 +96,32 @@ const OrderForm = () => {
                   </small>
                 )}
               </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text  text-white after:content-['*'] after:ml-0.5 after:text-[#FFF80A]">
+                    Contact Number
+                  </span>
+                </label>
+                <input
+                  {...confirmOrder("number", {
+                    required: true,
+                    // pattern: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+                  })}
+                  type="number"
+                  placeholder="Enter your contact number"
+                  className="input input-bordered"
+                />
+                {errors.number?.type === "required" && (
+                  <small className=" text-[#FFF80A] mt-1 self-end label-text-alt">
+                    Number is required
+                  </small>
+                )}
+                {/* {errors.email?.type === "pattern" && (
+                  <small className=" text-[#FFF80A] mt-1 self-end label-text-alt">
+                    Your email is invalid
+                  </small>
+                )} */}
+              </div>
 
               <div className="form-control mt-6 ">
                 <div className=" group relative mx-auto  w-[120px] rounded-lg z-10">
