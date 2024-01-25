@@ -74,7 +74,7 @@ const Footer = () => {
             <span className="text-white">Monday – Friday:</span> 8am – 4pm
           </p>
           <p className=" text-red-600 text-sm">
-            <span className="text-white">MSaturday::</span> 8am – 12am
+            <span className="text-white">Saturday::</span> 8am – 12am
           </p>
           <div className="flex gap-2 mt-4">
             {/* https://shorturl.at/osBL0 */}
