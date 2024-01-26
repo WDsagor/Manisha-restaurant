@@ -14,12 +14,12 @@ const InidanMenu = () => {
         }}
       >
         <div className="hero text-primary py-20 px-2">
-          <div className="hero-content flex-col lg:flex-row-reverse gap-10">
+          <div className="hero-content flex-col justify-between lg:flex-row-reverse gap-10">
             <Image
-              height={400}
+              height={500}
               width={500}
               src="/images/food1.png"
-              className="max-w-sm rounded-lg shadow-2xl"
+              className=""
             />
             <div>
               <h1 className="text-5xl font-bold">Our assorted Indian menu</h1>
