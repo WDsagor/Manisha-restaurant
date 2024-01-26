@@ -70,11 +70,11 @@ const Footer = () => {
 
         <nav>
           <header className="text-xl text-white">OPENING HOURS</header>
-          <p className=" text-red-600 text-sm mt-4">
-            <span className="text-white">Monday – Friday:</span> 8am – 4pm
+          <p className=" text-primary text-sm mt-4">
+            <span className="text-white">Monday – Friday: </span> 8am – 4pm
           </p>
-          <p className=" text-red-600 text-sm">
-            <span className="text-white">Saturday::</span> 8am – 12am
+          <p className=" text-primary text-sm">
+            <span className="text-white">Saturday: </span> 8am – 12am
           </p>
           <div className="flex gap-2 mt-4">
             {/* https://shorturl.at/osBL0 */}

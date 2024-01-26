@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { TbArrowBigRightLine } from "react-icons/tb";
 
@@ -20,14 +21,17 @@ const GreatDining = () => {
           enjoy a fine entrée with a secret-recipe sauce. If you are in a hurry,
           take advantage of our takeaway service.
         </p>
-        <div className="relative w-[135px] rounded-lg mx-auto">
+        <div className="relative w-[126px] rounded-lg mx-auto">
           <div className=" duration-500 transition-colors  rounded-lg before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:rounded-lg before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-0 text-white">
-            <button className=" py-2 duration-500 flex gap-1 px-3 justify-center items-center rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-lg before:hover:scale-x-100 ">
-              <span className="text-xl">Order now</span>
+            <Link
+              href={"/take-away"}
+              className=" py-2 duration-500 flex gap-1 px-3 justify-center items-center rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-lg before:hover:scale-x-100 "
+            >
+              <span className="text-xl">Take away</span>
               <span>
                 <TbArrowBigRightLine />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

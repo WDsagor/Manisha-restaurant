@@ -3,6 +3,7 @@ import TestOfIndia from "./TestOfIndia";
 import GreatDining from "./GreatDining";
 import InidanMenu from "./InidanMenu";
 import IndianDishes from "./IndianDishes";
+import ItemsCard from "./ItemsCard";
 
 const restaurant = () => {
   return (
@@ -11,6 +12,7 @@ const restaurant = () => {
       <GreatDining />
       <InidanMenu />
       <IndianDishes />
+      <ItemsCard />
     </div>
   );
 };
