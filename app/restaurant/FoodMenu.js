@@ -585,6 +585,74 @@ const foodMenu = [
       },
     ],
   },
+  {
+    id: 8,
+    catagoryName: "Vegetable Side Dishes",
+    items: [
+      { id: 1, name: "Bombay Aloo", discription: "", price: "3.95" },
+      { id: 2, name: "Saag Aloo", discription: "", price: "3.95" },
+      { id: 3, name: "Aloo Ghobhi", discription: "", price: "3.95" },
+      { id: 4, name: "Cauliflower Bhajji", discription: "", price: "3.95" },
+      { id: 5, name: "Mushroom Bhajji", discription: "", price: "3.95" },
+      { id: 6, name: "Mixed Vegetable", discription: "", price: "3.95" },
+      { id: 7, name: "Garlic Mushrooms", discription: "", price: "3.95" },
+      {
+        id: 8,
+        name: "Palak Paneer",
+        discription: "Spinach and Indian cheese mixed with a creamy sauce",
+        price: "4.50",
+      },
+      {
+        id: 9,
+        name: "Matar Paneer",
+        discription: "garden peas and Indian cheese mixed with a creamy sauce",
+        price: "4.50",
+      },
+      { id: 10, name: "Matar Mushroom Curry", discription: "", price: "4.50" },
+      { id: 11, name: "Chickpea Curry", discription: "", price: "4.50" },
+      {
+        id: 11,
+        name: "Karahi Paneer",
+        discription:
+          "Indian cheese cooked with peppers, onions and exotic spices",
+        price: "5.50",
+      },
+      {
+        id: 12,
+        name: "Creamy Mushroom & Spinach",
+        discription: "",
+        price: "4.50",
+      },
+      { id: 13, name: "Paneer Butter Masala", discription: "", price: "5.50" },
+      { id: 14, name: "Tadka Dal", discription: "", price: "4.50" },
+    ],
+  },
+  {
+    id: 9,
+    catagoryName: "English Dishes",
+    items: [
+      {
+        id: 1,
+        name: "Chicken Nuggets & Chips",
+        discription: "",
+        price: "7.45",
+      },
+      { id: 2, name: "10oz Steak & Chips", discription: "", price: "13.95" },
+      {
+        id: 3,
+        name: "Omelette",
+        discription: "Chicken/Plain/Cheese/Mushroom",
+        price: "8.55",
+      },
+      {
+        id: 4,
+        name: "Mushroom Omelette & Chips",
+        discription: "",
+        price: "8.55",
+      },
+      { id: 5, name: "Chips", discription: "", price: "2.70" },
+    ],
+  },
 ];
 
 export default foodMenu;

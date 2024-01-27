@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const SingleListCard = ({ fooditem }) => {
   const { catagoryName, items, discrip } = fooditem;

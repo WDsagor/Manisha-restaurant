@@ -125,7 +125,7 @@ const Navbar = () => {
                   path === "/contact" ? "text-red-600" : ""
                 } hover:text-red-600 transition-all`}
               >
-                <Link href={"/"}>Contact</Link>
+                <Link href={"/contact"}>Contact</Link>
               </li>
             </ul>
           </div>
