@@ -4,7 +4,10 @@ import GreatDining from "./GreatDining";
 import InidanMenu from "./InidanMenu";
 import IndianDishes from "./IndianDishes";
 import ItemsCard from "./ItemsCard";
-
+export const metadata = {
+  title: "Restaurant - Manisha",
+  description: "Manisha is Indian Restaurant",
+};
 const restaurant = () => {
   return (
     <div>
