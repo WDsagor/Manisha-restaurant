@@ -1,5 +1,3 @@
-
-
 const SingleListCard = ({ fooditem }) => {
   const { catagoryName, items, discrip } = fooditem;
   return (
@@ -29,7 +27,7 @@ const SingleListCard = ({ fooditem }) => {
                   <p className=" font-normal">King Prawns{item?.kingPrawns}</p>
                 )}
               </div>
-              <p className="text-lg font-bold text-primary">{item?.price}</p>
+              <p className="text-lg font-bold text-primary">£{item?.price}</p>
             </div>
           );
         })}
