@@ -76,7 +76,7 @@ const OrderForm = () => {
                     Email
                   </span>
                 </label>
-                <input
+                 <input
                   {...confirmOrder("email", {
                     required: true,
                     pattern: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
