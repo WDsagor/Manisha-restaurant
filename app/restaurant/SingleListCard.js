@@ -3,7 +3,7 @@ import Image from "next/image";
 const SingleListCard = ({ fooditem }) => {
   const { catagoryName, items, discrip } = fooditem;
   return (
-    <div className=" max-w-screen-2xl mx-auto pb-10">
+    <div className=" max-w-screen-2xl mx-auto pb-10 px-10">
       <div className=" max-w-screen-md mx-auto py-5">
         <h1 className="text-3xl text-center text-primary py-5">
           {catagoryName}
@@ -23,10 +23,11 @@ const SingleListCard = ({ fooditem }) => {
                   src={"/images/Chicken-Tikka-Biryani.jpg"}
                   height={100}
                   width={150}
+                  alt={item?.name}
                 />
 
                 <div>
-                  <h1 className=" font-bold text-primary text-lg">
+                  <h1 className=" font-bold text-primary uppercase text-lg">
                     {item?.name}
                   </h1>
                   <p className=" font-normal">{item?.discription}</p>
@@ -40,7 +41,7 @@ const SingleListCard = ({ fooditem }) => {
                   )}
                 </div>
               </div>
-              <div className="shrink-0">
+              <div className="shrink-0 flex flex-col justify-between">
                 <p className="text-lg font-bold text-primary">£{item?.price}</p>
                 <button className="btn btn-sm mt-5 uppercase ">
                   Add to cart
