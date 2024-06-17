@@ -6,7 +6,8 @@ const foodMenu = [
       {
         id: 1,
         name: "Tandoori Chicken",
-        discription: "",
+        discription:
+          " Boneless chicken cooked with exotic spices Tandoori Chicken",
         price: "4.75",
       },
       {

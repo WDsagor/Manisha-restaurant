@@ -1,7 +1,9 @@
 import Image from "next/image";
 
 const SingleListCard = ({ fooditem }) => {
-  const { catagoryName, items, discrip } = fooditem;
+  const { catagoryName, items, discrip, imgUrl } = fooditem;
+  console.log(fooditem);
+  console.log(imgUrl);
   return (
     <div className=" max-w-screen-2xl mx-auto pb-10 px-10">
       <div className=" max-w-screen-md mx-auto py-5">
@@ -20,7 +22,9 @@ const SingleListCard = ({ fooditem }) => {
               <div className="flex space-x-4">
                 <Image
                   className="rounded-ee-[60px] rounded-es-[70px]	rounded-se-[50px]"
-                  src={"/images/Chicken-Tikka-Biryani.jpg"}
+                  src={`${
+                    imgUrl ? imgUrl : "/images/Chicken-Tikka-Biryani.jpg"
+                  }`}
                   height={100}
                   width={150}
                   alt={item?.name}
