@@ -131,14 +131,14 @@ const foodMenu = [
         imgUrl: "/images/foodImages/Soft Shell Crab (NEW).jfif",
       },
       {
-        id: 17,
+        id: 18,
         name: "Fish Masala Fry",
         discription: "Catch of the day fish, coated with batter and deep fried",
         price: "5.50",
         imgUrl: "/images/foodImages/Fish Masala Fry.jpg",
       },
       {
-        id: 18,
+        id: 19,
         name: "Salmon Tikka",
         discription: "Marinated with exotic spices and cooked in a clay oven",
         price: "7.00",
@@ -146,14 +146,14 @@ const foodMenu = [
       },
 
       {
-        id: 19,
+        id: 20,
         name: "Mussels {New Zealand)",
         discription: "",
         price: "6.50",
         imgUrl: "/images/foodImages/Mussels {New Zealand).jpg",
       },
       {
-        id: 20,
+        id: 21,
         name: "Achari Paneer Tikka",
         discription:
           "Indian cheese cooked in a clay oven, served with onions and green pepper",
@@ -161,21 +161,21 @@ const foodMenu = [
         imgUrl: "/images/foodImages/Achari Paneer Tikka.jpg",
       },
       {
-        id: 21,
+        id: 22,
         name: "Vegetable Samosa (v)",
         discription: "Vegetables wrapped in a triangular pastry",
         price: "4.00",
         imgUrl: "/images/foodImages/Vegetable Samosa (v).jpg",
       },
       {
-        id: 22,
+        id: 23,
         name: "Onion Bahjji (v)",
         discription: "",
         price: "3.95",
         imgUrl: "/images/foodImages/Onion Bahjji (v).jpg",
       },
       {
-        id: 23,
+        id: 24,
         name: "Gol Guppa (v)",
         discription:
           "Stuffed puff pastries served with creamy yogurt, chickpeas, potatoes & coriander and mint chutney - Served cold",
@@ -183,7 +183,7 @@ const foodMenu = [
         imgUrl: "/images/foodImages/Gol Guppa (v).png",
       },
       {
-        id: 24,
+        id: 25,
         name: "Bhalla Papari Chaat (v)",
         discription:
           "Crispy wheat and lentil dumplings dipped in yoghurt and tamarind chutney. A famous roadside snack of Old Dehli Bazaar - Served cold",
@@ -191,7 +191,7 @@ const foodMenu = [
         imgUrl: "/images/foodImages/Bhalla Papari Chaat (v).jfif",
       },
       {
-        id: 25,
+        id: 26,
         name: "Mixed Platter",
         discription:
           "Sharing for two, chicken tikka, malai tikka, seekh kebab and fish pakora.",
@@ -199,7 +199,7 @@ const foodMenu = [
         imgUrl: "/images/foodImages/Mixed Platter.jfif",
       },
       {
-        id: 26,
+        id: 27,
         name: "Masha Bhara",
         discription:
           "Mackerel fish, hint of green chilli, lemon grass, onions and spinach ",
@@ -207,7 +207,7 @@ const foodMenu = [
         imgUrl: "/images/foodImages/Masha Bhara.jpg",
       },
       {
-        id: 27,
+        id: 28,
         name: "Hariyali Chicken Tikka",
         discription:
           "Made with boneless chicken blended and cooked in fresh green herbs and spices made of fresh mint leaves, coriander leaves and green chillies",

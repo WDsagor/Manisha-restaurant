@@ -8,6 +8,8 @@ import Link from "next/link";
 import { SearchBtn } from "./SearchBtn";
 import { usePathname } from "next/navigation";
 
+import CartArea from "./CartArea";
+
 const Navbar = () => {
   const path = usePathname();
 
@@ -148,8 +150,8 @@ const Navbar = () => {
                 </button>
               </div>
             </Link>
-            <a className="text-white px-3 rounded-md bg-green-600 py-2 ml-2">
-              <FaBasketShopping size={25} />
+            <a className=" bg-green-600  rounded-full ml-2">
+              <CartArea />
             </a>
           </div>
         </div>

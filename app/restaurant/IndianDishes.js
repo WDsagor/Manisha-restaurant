@@ -23,6 +23,7 @@ const IndianDishes = () => {
               width={600}
               src="/images/food2.png"
               className=""
+              alt="food"
             />
             <div>
               <h1 className="text-5xl font-bold leading-snug">

@@ -2,6 +2,8 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import store from "./redux/store";
+import StoreProvider from "./StoreProvider";
 
 const oswald = Oswald({
   weight: ["200", "300", "400", "600", "700"],
@@ -19,9 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${oswald.className} mx-auto`}>
-        <Navbar />
-        <div className="">{children}</div>
-        <Footer />
+        <StoreProvider>
+          <Navbar />
+          <div className="">{children}</div>
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );

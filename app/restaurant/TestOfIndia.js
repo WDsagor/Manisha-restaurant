@@ -15,9 +15,10 @@ const TestOfIndia = () => {
       <div className="mt-20 text-center max-w-screen-2xl mx-auto flex flex-col align-middle justify-center">
         <div className="mx-auto pb-5">
           <Image
-            height={500}
-            width={600}
+            height={800}
+            width={900}
             src={"/images/monisha-restrunt.webp"}
+            alt="Monisha resturant"
           />
         </div>
         <div className=" max-w-5xl mb-20">

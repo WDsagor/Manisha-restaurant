@@ -20,6 +20,7 @@ const InidanMenu = () => {
               width={500}
               src="/images/food1.png"
               className=""
+              alt="food"
             />
             <div>
               <h1 className="text-5xl font-bold">Our assorted Indian menu</h1>

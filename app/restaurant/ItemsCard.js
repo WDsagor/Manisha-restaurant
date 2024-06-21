@@ -1,11 +1,14 @@
 "use client";
 import SingleListCard from "./SingleListCard";
 import foodMenu from "./FoodMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Toast } from "../Utils/CostomsTost";
 
 const ItemsCard = () => {
   const [foodItems, setFoodItems] = useState(foodMenu);
   const [activeIndex, setActiveIndex] = useState(null);
+  const cartError = useSelector((state) => state?.cartItem?.error);
   const handleCatagoriesItems = (id, index) => {
     const foodCatagories = foodMenu.filter((fooItems) => fooItems.id === id);
     setFoodItems(foodCatagories);
@@ -15,7 +18,14 @@ const ItemsCard = () => {
     setFoodItems(foodMenu);
     setActiveIndex(null);
   };
-
+  useEffect(() => {
+    if (cartError) {
+      Toast.fire({
+        icon: "error",
+        title: `${cartError}`,
+      });
+    }
+  }, [cartError]);
   return (
     <div className="max-w-screen-2xl mx-auto">
       <div className=" text-center py-10">

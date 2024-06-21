@@ -1,8 +1,15 @@
 import Image from "next/image";
 import { TbArrowBigRightLine } from "react-icons/tb";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/features/cart/cartSlice";
 
 const SingleListCard = ({ fooditem }) => {
   const { catagoryName, items, discrip } = fooditem;
+
+  const dispatch = useDispatch();
+  const handleCart = (food) => {
+    dispatch(addToCart(food));
+  };
   return (
     <div className=" w-full max-w-screen-2xl mx-auto pb-10 px-2 lg:px-10">
       <div className=" max-w-screen-md mx-auto py-5">
@@ -46,9 +53,12 @@ const SingleListCard = ({ fooditem }) => {
                 <p className="text-lg lg:text-2xl font-bold text-primary">
                   £{item?.price}
                 </p>
-                <div className="relative mx-1 w-[120px] rounded-lg">
+                <div className="relative mx-1 w-[117px] rounded-lg">
                   <div className=" duration-500 transition-colors  rounded-lg before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:rounded-lg before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-0 text-white">
-                    <button className="duration-500 flex gap-1 px-3 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-lg before:hover:scale-x-100 ">
+                    <button
+                      onClick={() => handleCart(item)}
+                      className="duration-500 flex gap-1 px-3 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-lg before:hover:scale-x-100 "
+                    >
                       <span className="">Order now</span>
                       <span>
                         <TbArrowBigRightLine />
