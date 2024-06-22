@@ -14,7 +14,6 @@ const cartSlice = createSlice({
       const exitItem = state?.cartItems?.filter(
         ({ id, name }) => id === payload?.id && name === payload?.name
       );
-      state.error = "";
       if (
         exitItem[0]?.id !== payload?.id &&
         exitItem[0]?.name !== payload?.name

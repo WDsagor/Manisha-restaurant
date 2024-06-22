@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import { FaBasketShopping } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 
@@ -27,7 +27,9 @@ const CartArea = () => {
             </span>
             <span className="">Subtotal: $999</span>
             <div className="card-actions">
-              <button className="btn btn-primary btn-block">View cart</button>
+              <Link className="btn btn-primary btn-block" href="/cart">
+                View Cart
+              </Link>
             </div>
           </div>
         </div>

@@ -12,7 +12,6 @@ import CartArea from "./CartArea";
 
 const Navbar = () => {
   const path = usePathname();
-
   return (
     <nav className="fixed bg-opacity-50 shadow-md bg-black z-50 w-full justify-center  top-0 left-[50%] translate-x-[-50%]">
       <div className="max-w-screen-2xl mx-auto">
@@ -150,9 +149,9 @@ const Navbar = () => {
                 </button>
               </div>
             </Link>
-            <a className=" bg-green-600  rounded-full ml-2">
+            <button className=" bg-green-600  rounded-full ml-2">
               <CartArea />
-            </a>
+            </button>
           </div>
         </div>
       </div>

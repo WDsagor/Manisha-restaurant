@@ -6,6 +6,17 @@
 /* body{
     background-color: darkolivegreen;
 } */
+ /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .text span {
 position: absolute;
 left: 50%;
@@ -15,6 +26,7 @@ transform-origin: 0 88px;
     animation: logRotatetext 10s linear infinite;
 
 }
+
 @keyframes logRotatetext {
     0%{
         transform: rotate(0deg);
