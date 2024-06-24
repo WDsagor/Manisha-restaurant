@@ -26,7 +26,10 @@ const cartSlice = createSlice({
 
       // console.log(exitItem[0].id, exitItem[0].name);
     },
+    addQuantity: (state, { payload }) => {
+      console.log(state);
+    },
   },
 });
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, addQuantity } = cartSlice.actions;
 export default cartSlice.reducer;
