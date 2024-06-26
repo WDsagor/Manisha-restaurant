@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body className={`${oswald.className} mx-auto`}>
         <StoreProvider>
           <Navbar />
-          <div className="">{children}</div>
+          <div className="min-h-svh">{children}</div>
           <Footer />
         </StoreProvider>
       </body>
