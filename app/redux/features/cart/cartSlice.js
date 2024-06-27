@@ -50,7 +50,7 @@ const cartSlice = createSlice({
         ({ id, name }) => id === payload?.id && name === payload?.name
       );
       if (itemIndex >= 0) {
-        state.cartItems[itemIndex].quantity = payload.value;
+        state.cartItems[itemIndex].quantity = parseInt(payload.value);
         if (payload.value <= 0) {
           // state.error = "You can't set quantity zero !";
           state.cartItems[itemIndex].quantity = 1;
@@ -63,6 +63,9 @@ const cartSlice = createSlice({
       );
       state.cartItems = newItems;
     },
+    removeAllItems: (state, { payload }) => {
+      state.cartItems = [];
+    },
   },
 });
 export const {
@@ -71,5 +74,6 @@ export const {
   decreaseQuantity,
   handleInputQuantity,
   removeItem,
+  removeAllItems,
 } = cartSlice.actions;
 export default cartSlice.reducer;

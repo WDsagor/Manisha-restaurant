@@ -29,7 +29,10 @@ const CartArea = () => {
               </span>
               <span className="">Subtotal: $999</span>
               <div className="card-actions">
-                <Link className="btn btn-primary btn-block" href="/cart">
+                <Link
+                  className="btn btn-primary btn-block text-white"
+                  href="/cart"
+                >
                   View Cart
                 </Link>
               </div>
