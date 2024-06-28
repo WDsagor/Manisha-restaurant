@@ -12,7 +12,7 @@ const page = () => {
       {foodItems?.length ? (
         <div className="flex space-x-12">
           <SingleItem foodItems={foodItems} />
-          <CartCalculate />
+          <CartCalculate title="Proceed to Checkout" link="/checkout" />
         </div>
       ) : (
         <EmptyCart />

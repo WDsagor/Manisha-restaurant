@@ -81,7 +81,10 @@ const SingleItem = ({ foodItems }) => {
       </div>
       {foodItems?.map((item) => {
         return (
-          <section className=" relative shadow-2xl rounded-lg p-3 bg-white flex flex-col justify-between md:flex-row space-x-10 items-start md:items-center ">
+          <section
+            key={item.id}
+            className=" relative shadow-2xl rounded-lg p-3 bg-white flex flex-col justify-between md:flex-row space-x-10 items-start md:items-center "
+          >
             <div className="flex flex-1 justify-start space-x-5 flex-row items-center">
               <Image
                 className=" rounded-lg"
