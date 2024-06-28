@@ -66,13 +66,13 @@ const SingleItem = ({ foodItems }) => {
     });
   };
   return (
-    <div className=" p-5 rounded-3xl flex flex-col space-y-5 basis-3/4">
+    <div className="px-2 rounded-3xl flex flex-col space-y-5 w-full basis-2/3">
       <h1 className="text-4xl text-center">
         {" "}
         You added total{" "}
         <span className="text-primary">{foodItems?.length}</span> items
       </h1>
-      <div className="shadow-2xl rounded-lg p-3 bg-green-700 text-white flex justify-between flex-row space-x-11 items-center max-w-4xl">
+      <div className="shadow-2xl rounded-lg p-3 bg-green-700 text-white flex justify-between flex-row space-x-11 items-center">
         <h1 className=" flex-1">Food Items Name</h1>
         <h1 className=" flex-none"> Unit price</h1>
         <h1 className="basis-2/12 pl-6"> Quantity</h1>
@@ -81,7 +81,7 @@ const SingleItem = ({ foodItems }) => {
       </div>
       {foodItems?.map((item) => {
         return (
-          <section className=" relative shadow-2xl rounded-lg p-3 bg-white flex flex-col justify-between md:flex-row space-x-10 items-start md:items-center max-w-4xl ">
+          <section className=" relative shadow-2xl rounded-lg p-3 bg-white flex flex-col justify-between md:flex-row space-x-10 items-start md:items-center ">
             <div className="flex flex-1 justify-start space-x-5 flex-row items-center">
               <Image
                 className=" rounded-lg"
