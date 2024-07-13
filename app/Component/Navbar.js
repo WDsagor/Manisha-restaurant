@@ -136,7 +136,7 @@ const Navbar = () => {
               <SearchBtn />
             </div>
             <Link
-              href={"/restaurant"}
+              href={"/restaurant#menu-items"}
               className=" hidden md:block relative mx-1 overflow-hidden"
             >
               {/* <Button value="Order now" /> */}

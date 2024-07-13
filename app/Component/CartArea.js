@@ -44,7 +44,10 @@ const CartArea = () => {
                 Your Cart is <span className="text-red-600">Empty!</span>
               </h2>
               <div className="card-actions">
-                <Link className="btn btn-primary btn-block" href="/restaurant">
+                <Link
+                  className="btn btn-primary btn-block"
+                  href="/restaurant#menu-items"
+                >
                   Go to restaurant
                 </Link>
               </div>

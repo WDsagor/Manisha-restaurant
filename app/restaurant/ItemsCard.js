@@ -27,7 +27,7 @@ const ItemsCard = () => {
     }
   }, [cartError]);
   return (
-    <div className="max-w-screen-2xl mx-auto">
+    <div id="menu-items" className="max-w-screen-2xl mx-auto pt-16">
       <div className=" text-center py-10">
         <h1 className="text-5xl text-primary font-bold">Our Menu</h1>
       </div>
