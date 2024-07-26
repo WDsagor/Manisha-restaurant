@@ -2,7 +2,6 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
-import store from "./redux/store";
 import StoreProvider from "./StoreProvider";
 
 const oswald = Oswald({

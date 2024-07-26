@@ -5,10 +5,18 @@ import { removeItem } from "../redux/features/cart/cartSlice";
 import Swal from "sweetalert2";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
+import { useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const CheckoutItems = () => {
   const checkoutItems = useSelector((state) => state.cartItem.cartItems);
   const dispatch = useDispatch();
+  const router = useRouter();
+  useEffect(() => {
+    if (checkoutItems.length === 0) {
+      router.push("/restaurant#menu-items");
+    }
+  }, [checkoutItems]);
 
   const handleRemove = (id, name) => {
     Swal.fire({
