@@ -1,11 +1,13 @@
 "use client";
+import { useFormContext } from "react-hook-form";
 import { TbArrowBigRightLine } from "react-icons/tb";
 
-const TypeOfFood = ({ tableReserved, handleNext }) => {
+const TypeOfFood = ({ handleNext }) => {
+  const { register: tableReserved } = useFormContext();
   return (
-    <div>
+    <section>
       <h1 className="text-3xl">Please select your food type</h1>
-      <section>
+      <div>
         <div className="form-control">
           <label className="label justify-start space-x-3">
             <input
@@ -45,8 +47,8 @@ const TypeOfFood = ({ tableReserved, handleNext }) => {
             </div>
           </div>
         </button>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

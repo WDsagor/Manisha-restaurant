@@ -1,11 +1,11 @@
-import { Oswald } from "next/font/google";
+import { Oswald, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
 import StoreProvider from "./StoreProvider";
 
 const oswald = Oswald({
-  weight: ["200", "300", "400", "600", "700"],
+  weight: ["200", "400", "500", "700"],
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",

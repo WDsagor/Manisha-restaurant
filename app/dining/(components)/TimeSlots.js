@@ -1,40 +1,72 @@
 "use client";
-import { useState } from "react";
+import react, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { TbArrowBigLeftLine, TbArrowBigRightLine } from "react-icons/tb";
 
-const Guest = ({ handleNext, handleBack }) => {
+const TimeSlots = ({ handleNext, handleBack }) => {
   const { register: tableReserved } = useFormContext();
-  const guests = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25,
+  const times = [
+    {
+      name: "Lunch",
+      slots: [
+        "11:15 AM",
+        "11:30 AM",
+        "11:45 AM",
+        "12:00 PM",
+        "12:15 PM",
+        "12:30 PM",
+        "12:45 PM",
+        "1:00 PM",
+        "1:15 PM",
+        "1:30 PM",
+        "1:45 PM",
+        "2:00 PM",
+        "2:15 PM",
+        "2:30 PM",
+      ],
+    },
+    {
+      name: "Dinar",
+      slots: [
+        "08:00 PM",
+        "08:30 PM",
+        "09:00 AM",
+        "09:30 PM",
+        "10:00 PM",
+        "10:30 PM",
+        "11:00 PM",
+      ],
+    },
   ];
-  const [activeIndex, setActiveIndex] = useState(guests[0]);
+  const [activeIndex, setActiveIndex] = useState(times[1].slots[0]);
   return (
     <section>
-      <h1 className="text-3xl text-center mt-10">How many guests ? </h1>
+      <h1 className="text-3xl text-center mt-10">
+        Select your time from available times
+      </h1>
       <div>
         <div className="grid gap-5 grid-cols-5 py-10">
-          {guests.map((number, i) => {
+          {times[0].slots.map((slot, i) => {
             return (
               <button
-                key={i}
-                {...tableReserved("guests", {
+                {...tableReserved("time", {
                   require: true,
                 })}
-                onClick={(i) => setActiveIndex(number)}
-                value={number}
-                className={`btn btn-circle  btn-lg ${
-                  activeIndex === guests[i]
+                value={slot}
+                onClick={(i) => setActiveIndex(slot)}
+                key={i}
+                className={`btn btn-circle font-normal p-2  btn-lg ${
+                  activeIndex === times[1].slots[i]
                     ? "btn-neutral  text-white"
                     : "btn-outline"
                 }`}
               >
-                {number}
+                {slot}
               </button>
             );
           })}
         </div>
+
         <div className="flex flex-row space-x-16 mb-16">
           <button
             onClick={handleBack}
@@ -68,4 +100,4 @@ const Guest = ({ handleNext, handleBack }) => {
   );
 };
 
-export default Guest;
+export default TimeSlots;
