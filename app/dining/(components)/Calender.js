@@ -1,13 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import { TbArrowBigLeftLine, TbArrowBigRightLine } from "react-icons/tb";
 import "react-day-picker/style.css";
 import { useFormContext } from "react-hook-form";
+import { format } from "date-fns";
 
 const Calender = ({ handleNext, handleBack }) => {
-  const { register: tableReserved } = useFormContext();
-  const [selected, setSelected] = useState(new Date());
+  const today = new Date();
+  const [selected, setSelected] = useState(today);
+  const { setValue, watch } = useFormContext();
+  useEffect(() => {
+    setValue("reservationDate", format(selected, "dd-MM-yyyy"));
+  }, [selected]);
+
+  const dateR = watch();
+  console.log(dateR);
+
   return (
     <section>
       <DayPicker
@@ -15,17 +24,9 @@ const Calender = ({ handleNext, handleBack }) => {
           today: `border-neutral`,
           selected: `bg-neutral text-white rounded-full`,
         }}
-        {...tableReserved("date", {
-          require: true,
-        })}
         mode="single"
         selected={selected}
         onSelect={setSelected}
-        footer={
-          selected
-            ? `You selected: ${selected.toLocaleDateString()}`
-            : "Pick a day."
-        }
         disabled={{ dayOfWeek: [0] }}
         numberOfMonths={2}
       />

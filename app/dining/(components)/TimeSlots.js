@@ -1,10 +1,9 @@
 "use client";
-import react, { useState } from "react";
+import react, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { TbArrowBigLeftLine, TbArrowBigRightLine } from "react-icons/tb";
 
 const TimeSlots = ({ handleNext, handleBack }) => {
-  const { register: tableReserved } = useFormContext();
   const times = [
     {
       name: "Lunch",
@@ -26,7 +25,7 @@ const TimeSlots = ({ handleNext, handleBack }) => {
       ],
     },
     {
-      name: "Dinar",
+      name: "Dinner",
       slots: [
         "08:00 PM",
         "08:30 PM",
@@ -38,25 +37,42 @@ const TimeSlots = ({ handleNext, handleBack }) => {
       ],
     },
   ];
-  const [activeIndex, setActiveIndex] = useState(times[1].slots[0]);
+  const { setValue, watch } = useFormContext();
+  const { foodType } = watch();
+  // console.log(foodType);
+
+  const { reservationTime } = watch();
+  const [foodTypeIndex, setFoodTypeIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(
+    times[foodTypeIndex]?.slots[0] || null
+  );
+  useEffect(() => {
+    if (foodType === "Dinner") {
+      setFoodTypeIndex(1);
+    } else {
+      setFoodTypeIndex(0);
+    }
+  }, [foodType]);
+  const handleValue = (slot) => {
+    setActiveIndex(slot);
+    setValue("reservationTime", slot);
+  };
+
   return (
     <section>
       <h1 className="text-3xl text-center mt-10">
         Select your time from available times
       </h1>
       <div>
-        <div className="grid gap-5 grid-cols-5 py-10">
-          {times[0].slots.map((slot, i) => {
+        <div className="grid gap-5 grid-cols-8 py-10">
+          {times[foodTypeIndex]?.slots.map((slot, i) => {
             return (
               <button
-                {...tableReserved("time", {
-                  require: true,
-                })}
-                value={slot}
-                onClick={(i) => setActiveIndex(slot)}
                 key={i}
+                value={slot}
+                onClick={(i) => handleValue(slot)}
                 className={`btn btn-circle font-normal p-2  btn-lg ${
-                  activeIndex === times[1].slots[i]
+                  activeIndex === times[foodTypeIndex]?.slots[i]
                     ? "btn-neutral  text-white"
                     : "btn-outline"
                 }`}
@@ -84,6 +100,7 @@ const TimeSlots = ({ handleNext, handleBack }) => {
           <button
             onClick={handleNext}
             className="relative mx-1 group rounded-lg w-full z-10 mt-5"
+            disabled={!reservationTime}
           >
             <div className=" duration-500 transition-colors  rounded-lg before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:rounded-lg before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-0 text-white">
               <div className=" duration-500 flex gap-1 px-3 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-lg before:hover:scale-x-100 ">
