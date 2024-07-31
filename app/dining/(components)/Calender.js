@@ -7,9 +7,12 @@ import { useFormContext } from "react-hook-form";
 import { format } from "date-fns";
 
 const Calender = ({ handleNext, handleBack }) => {
-  const today = new Date();
-  const [selected, setSelected] = useState(today);
   const { setValue, watch } = useFormContext();
+  const { reservationDate } = watch();
+  const today = new Date();
+
+  const [selected, setSelected] = useState(today);
+
   useEffect(() => {
     setValue("reservationDate", format(selected, "dd-MM-yyyy"));
   }, [selected]);
@@ -19,6 +22,9 @@ const Calender = ({ handleNext, handleBack }) => {
 
   return (
     <section>
+      <h1 className="text-center text-3xl mb-14">
+        Select your reservation date
+      </h1>
       <DayPicker
         classNames={{
           today: `border-neutral`,
