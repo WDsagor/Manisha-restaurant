@@ -13,12 +13,12 @@ import Image from "next/image";
 const page = () => {
   const methods = useForm();
   const formArray = [1, 2, 3, 4, 5];
-  const reserveName = ["Food Type", "Guests", "Date", "Time", "Confirm"];
+  const reserveName = ["Type", "Guests", "Date", "Time", "Confirm"];
   const [formNo, setFromNo] = useState(reserveName[0]);
   // console.log(formNo);
 
   const handleNext = () => {
-    if (formNo === "Food Type") {
+    if (formNo === "Type") {
       setFromNo(reserveName[1]);
     } else if (formNo === "Guests") {
       setFromNo(reserveName[2]);
@@ -47,13 +47,14 @@ const page = () => {
     console.log(data);
   };
   return (
-    <section className="max-w-screen-2xl min-h-screen mx-auto grid lg:grid-cols-2 gap-10 mb-10">
+    <section className="max-w-screen-2xl  min-h-screen mx-auto grid lg:grid-cols-2 gap-10 mb-10 ">
       <div className="mt-32 ">
         <Image
           height={800}
           width={900}
-          src={"/images/monisha-restrunt.webp"}
+          src={"/images/restaurant-tables.jpg"}
           alt="Monisha resturant"
+          className="rounded-xl shadow-xl"
         />
       </div>
       <section className="mt-24 px-2 max-w-screen-md mx-auto">
@@ -120,7 +121,7 @@ const page = () => {
                     formNo === reserveName[i + 4] ||
                     formNo === reserveName.length
                       ? "text-neutral font-medium"
-                      : ""
+                      : " opacity-50 "
                   } text-center absolute font-normal justify-center items-center`}
                 >
                   {n}
@@ -131,7 +132,7 @@ const page = () => {
         </div>
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(submitReservation)}>
-            {formNo === "Food Type" && <TypeOfFood handleNext={handleNext} />}
+            {formNo === "Type" && <TypeOfFood handleNext={handleNext} />}
             {formNo === "Guests" && (
               <Guest handleNext={handleNext} handleBack={handleBack} />
             )}
