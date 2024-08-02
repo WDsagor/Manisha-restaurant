@@ -12,7 +12,7 @@ import Image from "next/image";
 
 const page = () => {
   const methods = useForm();
-  const formArray = [1, 2, 3, 4, 5];
+  // const formArray = [1, 2, 3, 4, 5];
   const reserveName = ["Type", "Guests", "Date", "Time", "Confirm"];
   const [formNo, setFromNo] = useState(reserveName[0]);
   // console.log(formNo);
@@ -44,7 +44,7 @@ const page = () => {
     }
   };
   const submitReservation = (data) => {
-    console.log(data);
+    // console.log(data);
   };
   return (
     <section className="max-w-screen-2xl  min-h-screen mx-auto grid lg:grid-cols-2 gap-10 mb-10 ">
@@ -142,37 +142,7 @@ const page = () => {
             {formNo === "Time" && (
               <TimeSlots handleNext={handleNext} handleBack={handleBack} />
             )}
-            {formNo === "Confirm" && <ConfirmFrom />}
-            {formNo === "Confirm" && (
-              <div className="flex flex-row space-x-16 mb-16">
-                <button
-                  onClick={handleBack}
-                  className="relative mx-1 group rounded-lg w-full z-10 mt-5"
-                >
-                  <div className=" duration-500 transition-colors  rounded-lg before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:rounded-lg before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-0 text-white">
-                    <div className=" duration-500 flex gap-1 px-3 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-lg before:hover:scale-x-100 ">
-                      <span className=" group-hover:translate-x-[-20px] transition-all">
-                        <TbArrowBigLeftLine />
-                      </span>
-                      <span className="p-1">Previous</span>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  type="submit"
-                  className="relative mx-1 group rounded-lg w-full z-10 mt-5"
-                >
-                  <div className=" duration-500 transition-colors  rounded-lg before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:rounded-lg before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-0 text-white">
-                    <div className=" duration-500 flex gap-1 px-3 justify-center items-center py-2 rounded-md uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-red-600 before:transition-transform before:duration-300 before:content-[''] before:rounded-lg before:hover:scale-x-100 ">
-                      <span className="p-1">Book now</span>
-                      <span className=" group-hover:translate-x-5 transition-all">
-                        <TbArrowBigRightLine />
-                      </span>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            )}
+            {formNo === "Confirm" && <ConfirmFrom handleBack={handleBack} />}
           </form>
         </FormProvider>
       </section>

@@ -1,20 +1,22 @@
 import React from "react";
 import { TbArrowBigLeftLine, TbArrowBigRightLine } from "react-icons/tb";
-import PreResurveData from "./PreResurveData";
-import ResurveInfoFrom from "./ResurveInfoFrom";
+import PreReserveData from "./PreReserveData";
+import ReserveInfoFrom from "./ReserveInfoFrom";
 import { useFormContext } from "react-hook-form";
 
-const ConfirmFrom = () => {
+const ConfirmFrom = ({ handleBack }) => {
   const {
     register: tableReservation,
     watch,
     formState: { errors },
   } = useFormContext();
   const watchShowChild = watch("showChildren", false);
+  // const name = watch();
+  // console.log(name);
 
   return (
     <section className="mx-auto">
-      <PreResurveData />
+      <PreReserveData />
       <div>
         <div className="form-control">
           <label className="label justify-start space-x-3 mt-2">
@@ -58,7 +60,7 @@ const ConfirmFrom = () => {
           )}
         </div>
       </div>
-      <ResurveInfoFrom />
+      <ReserveInfoFrom handleBack={handleBack} />
     </section>
   );
 };

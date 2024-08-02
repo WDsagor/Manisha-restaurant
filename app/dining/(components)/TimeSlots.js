@@ -99,7 +99,7 @@ const TimeSlots = ({ handleNext, handleBack }) => {
           </button>
           <button
             onClick={handleNext}
-            className="relative mx-1 group rounded-lg w-full z-10 mt-5"
+            className="relative disabled:opacity-20 disabled:cursor-not-allowed mx-1 group rounded-lg w-full z-10 mt-5"
             disabled={!reservationTime}
           >
             <div className=" duration-500 transition-colors  rounded-lg before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-right before:scale-x-100 before:rounded-lg before:bg-green-600 before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-0 text-white">

@@ -2,8 +2,8 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 
-const PreResurveData = () => {
-  const { register: tableReservation, watch } = useFormContext();
+const PreReserveData = () => {
+  const { watch } = useFormContext();
   const { type, gests, reservationDate, reservationTime } = watch();
   return (
     <div className="w-full">
@@ -35,4 +35,4 @@ const PreResurveData = () => {
   );
 };
 
-export default PreResurveData;
+export default PreReserveData;
