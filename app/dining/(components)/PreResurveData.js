@@ -22,7 +22,7 @@ const PreResurveData = () => {
           <span className="font-normal text-sm opacity-60">
             Number of guests
           </span>
-          <span className="text-primary font-medium">{gests}</span>
+          <span className="text-primary font-medium">{gests} persons</span>
         </p>
         <p className="flex flex-col justify-center">
           <span className="font-normal text-sm opacity-60">

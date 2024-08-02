@@ -26,6 +26,13 @@ transform-origin: 0 88px;
     animation: logRotatetext 10s linear infinite;
 
 }
+.PhoneInputCountryIconImg{
+    color:#A96628
+    
+}
+/* .PhoneInputInternationalIconPhone{
+    display: none;
+} */
 
 @keyframes logRotatetext {
     0%{

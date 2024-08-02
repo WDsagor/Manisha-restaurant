@@ -11,8 +11,6 @@ const ConfirmFrom = () => {
     formState: { errors },
   } = useFormContext();
   const watchShowChild = watch("showChildren", false);
-  const name = watch();
-  console.log(name);
 
   return (
     <section className="mx-auto">
